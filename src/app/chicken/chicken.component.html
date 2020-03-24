@@ -1,0 +1,17 @@
+<div class="container">
+        <div class="row">
+                <div @fade id="one" class="col-lg-4 col-md-6 col-sm-12" *ngFor="let y of x">
+                        <div class="two">
+                                <h1 style="margin-top: 60px;">components</h1><br>
+                                <p style="font-size: 20px;">{{ y.components }}</p>
+                            </div>
+                    <div class="card" style="text-align: center; margin: 10px;">
+                        <img class="card-img-top" src="{{ y.image }}" width="150" height="200">
+                        <h2 class="card-title">{{ y.type }}</h2>
+                        <p class="card-text">{{ y.salary }}</p>
+                    </div>
+                </div>
+            </div>
+ </div>
+        
+        

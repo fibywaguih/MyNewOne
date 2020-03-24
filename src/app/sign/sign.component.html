@@ -1,0 +1,71 @@
+<br><br>
+
+
+
+
+<form class="container p-4" style="background-color: rgb(70, 67, 67); text-align: center; color:rgb(146, 243, 107)">
+
+  <div class="form-row justify-content-md-center mb-4">
+
+    <div class="col-md-6 col-sm-12">
+      <h2>First name</h2>
+      <input [placeholder]="firstname" (keyup)="first2=$event.target.value;get1(first2)" type="text" class="form-control" id="validationDefault01" placeholder="firstname" required>
+      <p>{{ firstname }}</p>
+    </div>
+  </div>
+
+  <div class="form-row justify-content-md-center  mb-4">
+
+    <div class="col-md-6 mb-3">
+      <h2>Last name</h2>
+      <input [placeholder]="lastname" (keyup)="last2=$event.target.value;get2(last2)" type="text" class="form-control" id="validationDefault02" placeholder="Last name" required>
+      <p>{{ lastname }}</p>
+    </div>
+  </div>
+
+  <div class="form-row justify-content-md-center  mb-4">
+
+    <div class="col-md-6 mb-3">
+      <h2>Email</h2>
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroupPrepend2">@</span>
+        </div>
+        <input [placeholder]="email" (keyup)="email2=$event.target.value;get3(email2)" type="text" class="form-control" id="validationDefaultUsername"
+          aria-describedby="inputGroupPrepend2" required>
+      </div>
+      <p>{{ email }}</p>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="col-md-4 mb-3">
+      <h2>City</h2>
+      <input [placeholder]="city" (keyup)="city2=$event.target.value;get4(city2)" type="text" class="form-control" id="validationDefault03" placeholder="City" required>
+      <p>{{ city }}</p>
+    </div>
+
+    <div class="col-md-4 mb-3">
+      <h2>State</h2>
+      <input [placeholder]="state" (keyup)="state2=$event.target.value;get5(state2)" type="text" class="form-control" id="validationDefault04" required>
+      <p>{{ state }}</p>
+    </div>
+    <div class="col-md-4 mb-3">
+      <h2>Zip</h2>
+      <input [placeholder]="zip" (keyup)="zip2=$event.target.value;get6(zip2)" type="text" class="form-control" id="validationDefault05" required>
+      <p>{{ zip }}</p>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+      <label class="form-check-label" for="invalidCheck2">
+        Agree to terms and conditions
+      </label>
+    </div>
+  </div>
+
+  <button class="btn btn-success mb-4" type="submit">Submit form</button>
+
+</form>

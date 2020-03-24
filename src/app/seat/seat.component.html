@@ -1,0 +1,29 @@
+<div @fade class="container" id="onee">
+        <div class="two">
+            <p>seat<br>reservation</p>
+            <img src="assets\rest3.png" width="120" height="120">
+        </div>
+        <div class="three">
+        <div class="row">
+        <div class="col-lg-6 d-md-none d-sm-none d-none d-lg-block" style="text-align: center; border-right: 3px solid rgb(61, 60, 60);">
+            <img src="assets/restaurant.png" width="250" height="200" style="margin: 170px;">
+        </div>
+        <div id="one" class="col-lg-6 col-sm-12" style="text-align: center;">
+            <h2>Name of customer</h2>
+            <input [placeholder]="z" (keyup)="first=$event.target.value ; get1(first)" type="text" placeholder="enter your name">
+            <p>{{ z }}</p>
+            <h2>date of reservation</h2>
+            <input type="date">
+            <h2>time of reservation</h2>
+            <input type="time">
+            <h2>number of table</h2>
+            <select (click)="book()">
+                <option hidden>choose the number</option>
+                <option *ngFor="let y of x">{{ y }}</option>
+            </select><br><br>
+            <button class="btn btn-success">book</button>
+
+        </div>
+    </div>
+    </div>
+</div>

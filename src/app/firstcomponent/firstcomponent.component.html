@@ -1,0 +1,42 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <img src="assets/restaurant.png" width="150" height="100">
+  <button class="navbar-toggler" type="button" (click)="isCollapsed = !isCollapsed" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div [ngbCollapse]="isCollapsed" class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link active" routerLink="/Home">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/About">About</a>
+      </li>
+      <li ngbDropdown class="nav-item dropdown">
+        <a ngbDropdownToggle class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Menu
+        </a>
+        <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" routerLink="/Beef">Beef</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" routerLink="/Chicken">Chicken</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" routerLink="/Dessert">Dessert</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" routerLink="/Juices">Juices</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" routerLink="/Appetizers">Appetizers</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" routerLink="/Extra">Extra</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/Map" tabindex="-1" aria-disabled="true">Map</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="margin-right: 10px;" routerLink="/Sign">sign in</button>
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" routerLink="/Seat">seat reservation</button>
+    </form>
+  </div>
+</nav>
